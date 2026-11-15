@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>FounderBrands landing page concepts</title>
+<style>
+@font-face{font-family:"Grotesk";src:url(assets/fonts/space-grotesk-latin-700-normal.woff2) format("woff2"),url(https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5.3.0/files/space-grotesk-latin-700-normal.woff2) format("woff2");font-weight:700}
+@font-face{font-family:"Inter";src:url(assets/fonts/inter-latin-400-normal.woff2) format("woff2"),url(https://cdn.jsdelivr.net/npm/@fontsource/inter@5.3.0/files/inter-latin-400-normal.woff2) format("woff2");font-weight:400}
+body{margin:0;min-height:100vh;display:grid;place-items:center;background:#ECEBE6;color:#161614;font:400 17px/1.5 "Inter",system-ui,sans-serif;padding:40px 20px}
+main{width:min(880px,100%)}
+h1{font:700 clamp(30px,4vw,44px)/1.1 "Grotesk";letter-spacing:-.02em;margin:0 0 10px}
+p{margin:0 0 32px;color:#55544E;max-width:60ch}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+a{display:block;text-decoration:none;color:inherit;border-radius:10px;padding:28px;min-height:200px;transition:transform .15s}
+a:hover{transform:translateY(-3px)}
+a:focus-visible{outline:3px solid #0B4A35;outline-offset:3px}
+.a{background:#FAFBF7;border:1.5px solid #15201B}
+.b{background:#0E0E0C;color:#F1EFE8}
+.b span{color:#B8F527}
+h2{font:700 24px/1.15 "Grotesk";margin:10px 0 8px}
+small{font-size:14px;opacity:.75}
+@media(max-width:640px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main>
+  <h1>FounderBrands: two landing page concepts</h1>
+  <p>Both pages have one job: get a qualified prospect to request a free profile audit. Same offer, same proof, two very different voices.</p>
+  <div class="grid">
+    <a class="a" href="option-a-cpa/"><small>Option A</small><h2>CPAs and fractional CFOs</h2><small>StoryBrand structure. Credible, specific, built like a tax form.</small></a>
+    <a class="b" href="option-b-founders/"><small>Option B</small><h2>B2B founders. <span>Loud.</span></h2><small>The founder-led growth agency. Brash, direct, built to stop the scroll.</small></a>
+  </div>
+</main>
+</body>
+</html>

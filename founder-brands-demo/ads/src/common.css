@@ -1,0 +1,10 @@
+@font-face{font-family:"Plex";src:url(../../assets/fonts/ibm-plex-sans-latin-700-normal.woff2);font-weight:700}
+@font-face{font-family:"Plex";src:url(../../assets/fonts/ibm-plex-sans-latin-500-normal.woff2);font-weight:500}
+@font-face{font-family:"PlexMono";src:url(../../assets/fonts/ibm-plex-mono-latin-500-normal.woff2);font-weight:500}
+@font-face{font-family:"PlexMono";src:url(../../assets/fonts/ibm-plex-mono-latin-400-normal.woff2);font-weight:400}
+@font-face{font-family:"Pen";src:url(../../assets/fonts/caveat-latin-700-normal.woff2);font-weight:700}
+@font-face{font-family:"Anton";src:url(../../assets/fonts/anton-latin-400-normal.woff2)}
+@font-face{font-family:"Grotesk";src:url(../../assets/fonts/space-grotesk-latin-700-normal.woff2);font-weight:700}
+@font-face{font-family:"Grotesk";src:url(../../assets/fonts/space-grotesk-latin-500-normal.woff2);font-weight:500}
+html,body{margin:0}
+.ad{width:1080px;height:1350px;position:relative;overflow:hidden;box-sizing:border-box}
