@@ -3,35 +3,437 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FounderBrands | The Founder-Led Growth Agency</title>
+<meta name="description" content="The founder-led growth agency. One hour a month of your time becomes daily LinkedIn and X content, outbound conversations and qualified sales calls. Start with a free profile audit.">
 <meta name="robots" content="noindex">
-<title>FounderBrands landing page concepts</title>
 <style>
-@font-face{font-family:"Grotesk";src:url(assets/fonts/space-grotesk-latin-700-normal.woff2) format("woff2"),url(https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5.3.0/files/space-grotesk-latin-700-normal.woff2) format("woff2");font-weight:700}
-@font-face{font-family:"Inter";src:url(assets/fonts/inter-latin-400-normal.woff2) format("woff2"),url(https://cdn.jsdelivr.net/npm/@fontsource/inter@5.3.0/files/inter-latin-400-normal.woff2) format("woff2");font-weight:400}
-body{margin:0;min-height:100vh;display:grid;place-items:center;background:#ECEBE6;color:#161614;font:400 17px/1.5 "Inter",system-ui,sans-serif;padding:40px 20px}
-main{width:min(880px,100%)}
-h1{font:700 clamp(30px,4vw,44px)/1.1 "Grotesk";letter-spacing:-.02em;margin:0 0 10px}
-p{margin:0 0 32px;color:#55544E;max-width:60ch}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-a{display:block;text-decoration:none;color:inherit;border-radius:10px;padding:28px;min-height:200px;transition:transform .15s}
-a:hover{transform:translateY(-3px)}
-a:focus-visible{outline:3px solid #0B4A35;outline-offset:3px}
-.a{background:#FAFBF7;border:1.5px solid #15201B}
-.b{background:#0E0E0C;color:#F1EFE8}
-.b span{color:#B8F527}
-h2{font:700 24px/1.15 "Grotesk";margin:10px 0 8px}
-small{font-size:14px;opacity:.75}
-@media(max-width:640px){.grid{grid-template-columns:1fr}}
+@font-face{font-family:"Anton";src:url(assets/fonts/anton-latin-400-normal.woff2) format("woff2"),url(https://cdn.jsdelivr.net/npm/@fontsource/anton@5.3.0/files/anton-latin-400-normal.woff2) format("woff2");font-display:swap}
+@font-face{font-family:"Grotesk";src:url(assets/fonts/space-grotesk-latin-500-normal.woff2) format("woff2"),url(https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5.3.0/files/space-grotesk-latin-500-normal.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Grotesk";src:url(assets/fonts/space-grotesk-latin-700-normal.woff2) format("woff2"),url(https://cdn.jsdelivr.net/npm/@fontsource/space-grotesk@5.3.0/files/space-grotesk-latin-700-normal.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"Inter";src:url(assets/fonts/inter-latin-400-normal.woff2) format("woff2"),url(https://cdn.jsdelivr.net/npm/@fontsource/inter@5.3.0/files/inter-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Inter";src:url(assets/fonts/inter-latin-500-normal.woff2) format("woff2"),url(https://cdn.jsdelivr.net/npm/@fontsource/inter@5.3.0/files/inter-latin-500-normal.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Inter";src:url(assets/fonts/inter-latin-600-normal.woff2) format("woff2"),url(https://cdn.jsdelivr.net/npm/@fontsource/inter@5.3.0/files/inter-latin-600-normal.woff2) format("woff2");font-weight:600;font-display:swap}
+
+:root{
+  --carbon:#0E0E0C;
+  --char:#1A1A17;
+  --bone:#F1EFE8;
+  --smoke:#9A988F;
+  --line:#2E2D29;
+  --volt:#B8F527;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--carbon);color:var(--bone);font:400 18px/1.6 "Inter",system-ui,sans-serif}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.06;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--volt);outline-offset:3px}
+.wrap{width:min(1240px,100% - 40px);margin-inline:auto}
+p{margin:0 0 1em;max-width:62ch}
+.shout{font-family:"Anton",Impact,sans-serif;font-weight:400;text-transform:uppercase;line-height:.9;letter-spacing:.005em;margin:0}
+h2.shout{font-size:clamp(46px,7.4vw,108px)}
+h3{font:700 22px/1.2 "Grotesk";margin:0 0 8px;letter-spacing:-.01em}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--volt);color:var(--carbon);font:700 19px/1 "Grotesk";padding:20px 30px;border:0;border-radius:8px;text-decoration:none;cursor:pointer;box-shadow:0 0 0 0 rgba(184,245,39,0);transition:transform .12s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 40px -8px rgba(184,245,39,.55)}
+.btn:active{transform:translateY(1px)}
+
+/* bar */
+.bar{position:sticky;top:0;z-index:40;background:rgba(14,14,12,.88);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:12px}
+.wordmark{font:700 20px/1.1 "Grotesk";letter-spacing:-.02em;text-decoration:none}
+.wordmark span{display:block;font:500 13px/1.2 "Inter";letter-spacing:0;color:var(--smoke)}
+.bar .btn{font-size:15px;padding:12px 18px}
+
+/* hero: the headline gets louder as it goes */
+.hero{padding:clamp(44px,7vw,96px) 0 clamp(36px,5vw,64px);overflow:hidden}
+.hero h1{margin:0}
+.l1{display:block;font:700 clamp(26px,3.6vw,48px)/1.1 "Grotesk";letter-spacing:-.025em;max-width:22ch}
+.l2{display:block;font-size:clamp(64px,11vw,168px);margin-top:.15em}
+.l3{display:block;margin-top:.03em;font-size:clamp(80px,24.5vw,380px);line-height:.8;color:var(--volt);margin-left:-.04em;transform-origin:left bottom;animation:louder .7s .2s cubic-bezier(.2,.9,.2,1.15) both}
+@keyframes louder{from{transform:scale(.38);opacity:0}to{transform:scale(1);opacity:1}}
+.hero-foot{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(24px,4vw,64px);align-items:end;margin-top:clamp(28px,4vw,52px);padding-top:28px;border-top:1px solid var(--line)}
+.hero-foot p{font-size:clamp(18px,1.6vw,21px);color:#CFCDC5;margin:0}
+.hero-foot p b{color:var(--bone);font-weight:600}
+.cta-stack{display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+.micro{font-size:14px;color:var(--smoke)}
+
+/* receipts ticker */
+.ticker{border-block:1px solid var(--line);overflow:hidden;background:var(--char)}
+.track{display:flex;width:max-content;animation:tick 48s linear infinite}
+.track span{font:400 clamp(22px,2.4vw,32px)/1 "Anton";text-transform:uppercase;padding:20px 28px;white-space:nowrap;color:var(--bone)}
+.track span:nth-child(3n+1){color:var(--volt)}
+@keyframes tick{to{transform:translateX(-50%)}}
+.ticker:hover .track{animation-play-state:paused}
+
+/* letter */
+.letter{padding:clamp(64px,9vw,128px) 0}
+.letter .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(24px,5vw,80px)}
+.letter h2{font-size:clamp(46px,6vw,88px)}
+.letter-body{font:500 clamp(20px,1.9vw,25px)/1.45 "Grotesk";letter-spacing:-.01em}
+.letter-body p{margin:0 0 .9em;max-width:34ch}
+.letter-body .dim{color:var(--smoke)}
+.letter-body .hit{color:var(--volt)}
+.letter-body ul{list-style:none;margin:0 0 .9em;padding:0}
+.letter-body li{padding:10px 0;border-bottom:1px solid var(--line);color:#CFCDC5;max-width:36ch}
+.letter-body li b{color:var(--bone)}
+
+/* rent vs equity */
+.rent{padding:clamp(64px,9vw,120px) 0;background:var(--bone);color:var(--carbon)}
+.rent h2{max-width:13ch}
+.rent .intro{font-size:20px;margin-top:22px;color:#3B3A35}
+.vs{display:grid;grid-template-columns:auto 1fr 1fr;margin-top:48px;border-top:3px solid var(--carbon)}
+.vs > div{padding:18px 20px 18px 0;border-bottom:1px solid #CFCBBE;font-size:17px}
+.vs .k{font:700 15px/1.3 "Grotesk";color:#5C5A52;padding-right:28px}
+.vs .h{font:400 30px/1 "Anton";text-transform:uppercase;padding-block:22px 16px;border-bottom:3px solid var(--carbon)}
+.vs .us{font-weight:600}
+.vs .h.us{color:var(--carbon);background:linear-gradient(transparent 62%,var(--volt) 62%);justify-self:start;padding-right:6px}
+
+/* the deal */
+.deal{padding:clamp(64px,9vw,128px) 0}
+.split{display:grid;grid-template-columns:1fr 1.4fr;gap:0;margin-top:48px;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.split > div{padding:clamp(24px,3.5vw,44px)}
+.split .you{background:var(--char)}
+.split .them{border-left:1px solid var(--line)}
+.split .tag{font:700 16px/1 "Grotesk";color:var(--smoke);margin-bottom:22px}
+.split ul{list-style:none;margin:0;padding:0}
+.split li{display:flex;gap:16px;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--line)}
+.split li:last-child{border-bottom:0}
+.split li b{font:400 clamp(30px,3vw,42px)/1 "Anton";color:var(--volt);min-width:3.4ch;flex:none}
+.split .you li b{min-width:4.6ch}
+.split .you li b{color:var(--bone)}
+.split li span{font-size:17px;color:#CFCDC5}
+
+/* receipts */
+.receipts{padding:0 0 clamp(64px,9vw,128px)}
+.receipts h2{margin-bottom:12px}
+.receipts .sub{color:var(--smoke);font-size:19px}
+.rows{margin-top:40px;border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:200px minmax(0,1fr) minmax(0,1.1fr);gap:clamp(18px,3vw,40px);align-items:center;padding:24px 0;border-bottom:1px solid var(--line)}
+.row img{width:200px;aspect-ratio:16/10;object-fit:cover;border-radius:6px;filter:grayscale(.35) contrast(1.05);background:var(--char)}
+.row .num{font:400 clamp(44px,5.4vw,80px)/.92 "Anton";text-transform:uppercase}
+.row .num small{display:block;font:500 15px/1.35 "Inter";text-transform:none;color:var(--smoke);margin-top:8px}
+.row blockquote{margin:0;font:500 clamp(18px,1.6vw,21px)/1.4 "Grotesk"}
+.row cite{display:block;font:400 14px/1.4 "Inter";font-style:normal;color:var(--smoke);margin-top:8px}
+
+/* collin */
+.founder{padding:clamp(64px,9vw,120px) 0;background:var(--char);border-block:1px solid var(--line)}
+.founder .wrap{display:grid;grid-template-columns:.75fr 1.25fr;gap:clamp(28px,5vw,80px);align-items:center}
+.founder img{border-radius:8px;aspect-ratio:4/5;object-fit:cover;width:100%;filter:grayscale(1) contrast(1.1)}
+.founder p{color:#CFCDC5;font-size:19px;margin-top:20px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);margin-top:30px;border-top:1px solid var(--line)}
+.facts div{padding:18px 16px 0 0}
+.facts b{display:block;font:400 clamp(38px,4vw,58px)/1 "Anton";color:var(--volt)}
+.facts span{font-size:15px;color:var(--smoke)}
+
+/* guarantee */
+.guarantee{background:var(--volt);color:var(--carbon);padding:clamp(64px,9vw,128px) 0}
+.guarantee .shout{font-size:clamp(56px,10vw,150px);max-width:14ch}
+.guarantee p{font:500 clamp(19px,1.8vw,23px)/1.45 "Grotesk";margin-top:28px;max-width:40ch}
+
+/* math */
+.math{padding:clamp(64px,9vw,128px) 0}
+.math .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,80px);align-items:start}
+.math p{color:#CFCDC5;font-size:19px;margin-top:22px}
+.bill{border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.bill div{display:flex;justify-content:space-between;gap:16px;padding:18px 22px;border-bottom:1px solid var(--line);font-size:17px}
+.bill div:last-child{border-bottom:0}
+.bill .x{color:var(--smoke);text-decoration:line-through;text-decoration-color:rgba(241,239,232,.35)}
+.bill .total{background:var(--char);font:700 20px "Grotesk"}
+.bill .total span:last-child{color:var(--volt)}
+
+/* not for you */
+.nope{padding:0 0 clamp(64px,9vw,128px)}
+.nope ul{list-style:none;margin:36px 0 0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:0 48px}
+.nope li{padding:18px 0 18px 44px;border-bottom:1px solid var(--line);position:relative;font-size:18px;color:#CFCDC5}
+.nope li::before{content:"";position:absolute;left:0;top:28px;width:22px;height:3px;background:#E5484D;transform:rotate(-12deg)}
+
+/* audit */
+.audit{padding:clamp(64px,9vw,128px) 0;border-top:1px solid var(--line);background:radial-gradient(900px 500px at 85% 20%,rgba(184,245,39,.10),transparent 70%)}
+.audit .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(28px,5vw,80px);align-items:start}
+.audit .shout{font-size:clamp(50px,7vw,104px)}
+.audit .lede{font-size:20px;color:#CFCDC5;margin-top:24px}
+.audit ul{list-style:none;padding:0;margin:24px 0 0}
+.audit li{padding:10px 0;border-bottom:1px solid var(--line);font-size:17px}
+.audit li::before{content:"";display:inline-block;width:9px;height:9px;background:var(--volt);margin-right:14px;vertical-align:middle}
+.formbox{background:var(--char);border:1px solid #3A3934;border-radius:12px;padding:clamp(22px,3vw,34px)}
+.formbox label{display:block;font:700 15px/1.2 "Grotesk";margin:0 0 8px}
+.formbox .opt{font:400 13px "Inter";color:var(--smoke);margin-left:6px}
+.formbox input,.formbox select{width:100%;font:400 17px "Inter";color:var(--bone);background:var(--carbon);border:1px solid #3A3934;border-radius:8px;padding:14px;margin-bottom:18px}
+.formbox select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--smoke) 50%),linear-gradient(135deg,var(--smoke) 50%,transparent 50%);background-position:calc(100% - 20px) 50%,calc(100% - 14px) 50%;background-size:6px 6px;background-repeat:no-repeat}
+.formbox input:focus,.formbox select:focus{border-color:var(--volt);outline:none;box-shadow:0 0 0 3px rgba(184,245,39,.25)}
+.formbox input::placeholder{color:#6E6C65}
+.formbox .btn{width:100%;margin-top:4px}
+.formbox .fine{font-size:13px;color:var(--smoke);margin:14px 0 0}
+.status{color:#FF8A8D;font-weight:600;font-size:15px;margin:0 0 12px}
+.done{outline:none}
+.done .shout{font-size:56px;color:var(--volt)}
+.done p{color:#CFCDC5;margin-top:14px}
+.done ol{margin:0;padding-left:1.2em;color:#CFCDC5}
+.done li{border:0;padding:4px 0}
+.done li::before{display:none}
+
+footer{padding:28px 0 40px;border-top:1px solid var(--line);font-size:13px;color:var(--smoke)}
+
+@media (max-width:960px){
+  .hero-foot,.letter .wrap,.founder .wrap,.math .wrap,.audit .wrap{grid-template-columns:1fr}
+  .split{grid-template-columns:1fr}
+  .split .them{border-left:0;border-top:1px solid var(--line)}
+  .row{grid-template-columns:120px 1fr}
+  .row img{width:120px}
+  .row blockquote{grid-column:1 / -1}
+  .nope ul{grid-template-columns:1fr}
+  .founder img{max-width:360px}
+}
+@media (max-width:600px){
+  body{font-size:17px}
+  .wordmark span{display:none}
+  .vs{grid-template-columns:1fr 1fr}
+  .vs .k{grid-column:1 / -1;padding-bottom:0;border-bottom:0;color:var(--carbon)}
+  .vs .blank{display:none}
+  .facts{grid-template-columns:1fr 1fr 1fr}
+  .facts span{font-size:13px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.track{flex-wrap:wrap;width:auto}}
 </style>
 </head>
 <body>
-<main>
-  <h1>FounderBrands: two landing page concepts</h1>
-  <p>Both pages have one job: get a qualified prospect to request a free profile audit. Same offer, same proof, two very different voices.</p>
-  <div class="grid">
-    <a class="a" href="option-a-cpa/"><small>Option A</small><h2>CPAs and fractional CFOs</h2><small>StoryBrand structure. Credible, specific, built like a tax form.</small></a>
-    <a class="b" href="option-b-founders/"><small>Option B</small><h2>B2B founders. <span>Loud.</span></h2><small>The founder-led growth agency. Brash, direct, built to stop the scroll.</small></a>
+
+<header class="bar">
+  <div class="wrap">
+    <a class="wordmark" href="#top">FounderBrands<span>The founder-led growth agency</span></a>
+    <a class="btn" href="#audit" data-scroll-audit>Audit my profile</a>
   </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <h1>
+      <span class="l1">Your competitors aren't better than you.</span>
+      <span class="shout l2">They're just</span>
+      <span class="shout l3">Louder.</span>
+    </h1>
+    <div class="hero-foot">
+      <p><b>We're the founder-led growth agency.</b> You talk for one hour a month. We turn it into daily LinkedIn and X posts, run the outreach, and put qualified sales calls on your calendar. You never write a damn post.</p>
+      <div class="cta-stack">
+        <a class="btn" href="#audit" data-scroll-audit>Audit my profile</a>
+        <span class="micro">Free. 60 seconds. No sales call required.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-label="Client results">
+  <div class="track" aria-hidden="true">
+    <span>16 calls in 60 days. Brad Nelson, CPA</span>
+    <span>2x revenue in 60 days from zero X followers</span>
+    <span>Under $10k to nearly $20k a month</span>
+    <span>13k to 360k LinkedIn impressions</span>
+    <span>5.0 on Clutch</span>
+    <span>500%+ ROI from X leads</span>
+    <span>16 calls in 60 days. Brad Nelson, CPA</span>
+    <span>2x revenue in 60 days from zero X followers</span>
+    <span>Under $10k to nearly $20k a month</span>
+    <span>13k to 360k LinkedIn impressions</span>
+    <span>5.0 on Clutch</span>
+    <span>500%+ ROI from X leads</span>
+  </div>
+  <p class="sr-only" style="position:absolute;left:-9999px">Client results: Brad Nelson booked 16 calls in 60 days. Ashley Storm-Ruleman doubled revenue in 60 days starting from zero X followers. Mike Calcara went from under $10k to nearly $20k a month. Phil Fitzgerald went from 13k to 360k LinkedIn impressions. Michael Glynn saw 500%+ ROI from X leads. 5.0 rating on Clutch.</p>
+</div>
+
+<section class="letter" aria-labelledby="letter-h">
+  <div class="wrap">
+    <h2 id="letter-h" class="shout">Dear founder,</h2>
+    <div class="letter-body">
+      <p>You're good at what you do. Ridiculously good.</p>
+      <p>Your clients know it. Your team knows it.</p>
+      <p class="dim">The internet has no idea you exist.</p>
+      <ul>
+        <li><b>You tried posting.</b> Lasted three weeks. Then a client fire ate your Tuesday.</li>
+        <li><b>You hired a ghostwriter.</b> Every post read like a LinkedIn horoscope.</li>
+        <li><b>You ran ads.</b> Paid good money to talk to people who wanted free advice.</li>
+      </ul>
+      <p>Meanwhile, some guy with half your experience posts every morning, and his calendar is full.</p>
+      <p>That's not a talent problem. It's a distribution problem.</p>
+      <p class="hit">We fix distribution.</p>
+    </div>
+  </div>
+</section>
+
+<section class="rent" aria-labelledby="rent-h">
+  <div class="wrap">
+    <h2 id="rent-h" class="shout">Ads are rent. An audience is equity.</h2>
+    <p class="intro">Every month you pay for clicks, you start from zero. Every month you build an audience, the next lead gets cheaper and the next conversation starts warmer.</p>
+    <div class="vs" role="table" aria-label="Paid ads compared with founder-led growth">
+      <div class="k blank" role="columnheader"></div><div class="h" role="columnheader">Paid ads alone</div><div class="h us" role="columnheader">Founder-led growth</div>
+      <div class="k" role="rowheader">When you stop paying</div><div role="cell">Leads stop the same day</div><div class="us" role="cell">Your audience stays and keeps compounding</div>
+      <div class="k" role="rowheader">Who shows up</div><div role="cell">Cold clicks who've never heard of you</div><div class="us" role="cell">People who've read your thinking for months</div>
+      <div class="k" role="rowheader">Cost per lead over time</div><div role="cell">Goes up every year</div><div class="us" role="cell">Goes down as reach grows</div>
+      <div class="k" role="rowheader">First five minutes of the call</div><div role="cell">Proving you're legit</div><div class="us" role="cell">Talking about when to start</div>
+    </div>
+  </div>
+</section>
+
+<section class="deal" aria-labelledby="deal-h">
+  <div class="wrap">
+    <h2 id="deal-h" class="shout">Here's the deal.</h2>
+    <div class="split">
+      <div class="you">
+        <div class="tag">What you do</div>
+        <ul>
+          <li><b>Talk</b><span>One hour, once a month, recorded. Talk shop. That's the job.</span></li>
+          <li><b>Approve</b><span>Your posts, before they go live. Unlimited revisions.</span></li>
+          <li><b>Close</b><span>Show up to the calls. Buyers arrive warm.</span></li>
+        </ul>
+      </div>
+      <div class="them">
+        <div class="tag">What we do</div>
+        <ul>
+          <li><b>1</b><span>Custom brand book, so every post sounds like you on a good day</span></li>
+          <li><b>Daily</b><span>Posts on LinkedIn and X, written and published for you</span></li>
+          <li><b>100+</b><span>Targeted comments on your ideal buyers' posts every month</span></li>
+          <li><b>200+</b><span>Connection requests to the people you actually want to sell to</span></li>
+          <li><b>150+</b><span>Direct conversations started every month by your outbound specialist</span></li>
+          <li><b>Booked</b><span>Qualified sales calls dropped straight onto your calendar</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="receipts" aria-labelledby="rec-h">
+  <div class="wrap">
+    <h2 id="rec-h" class="shout">Receipts. Not vibes.</h2>
+    <p class="sub">Real clients. Real names. Most of them didn't write a single post.</p>
+    <div class="rows">
+      <div class="row">
+        <img src="https://founderbrands.io/assets/artifact/7915eb718b6f6eae.jpg" alt="Brad Nelson" loading="lazy">
+        <div class="num">16 calls<small>in his first 60 days, plus $120k in added annual revenue</small></div>
+        <blockquote>One prospect went from booked call to signed proposal in a week.<cite>Brad Nelson, CPA, Stryker Finance</cite></blockquote>
+      </div>
+      <div class="row">
+        <img src="https://founderbrands.io/assets/artifact/03d051c6c1c8ad92.jpg" alt="Ashley Storm-Ruleman" loading="lazy">
+        <div class="num">2x revenue<small>in 60 days, starting from zero X followers</small></div>
+        <blockquote>&ldquo;I had my biggest month in October I&rsquo;ve ever had.&rdquo;<cite>Ashley Storm-Ruleman, Storm-Ruleman PLLC</cite></blockquote>
+      </div>
+      <div class="row">
+        <img src="https://founderbrands.io/assets/artifact/411af5a3e9281cba.jpg" alt="Mike Calcara" loading="lazy">
+        <div class="num">~$20k/mo<small>up from under $10k a month</small></div>
+        <blockquote>&ldquo;I&rsquo;ve closed deals from people tagging me. And I don&rsquo;t even touch the content.&rdquo;<cite>Mike Calcara, founder, Motosaic</cite></blockquote>
+      </div>
+      <div class="row">
+        <img src="https://founderbrands.io/assets/artifact/0bd7b94b6c08bb76.jpg" alt="Luke Monteleone" loading="lazy">
+        <div class="num">$10k/mo<small>account won back through one reconnected LinkedIn relationship</small></div>
+        <blockquote>A lost client came back because Luke was visible again.<cite>Luke Monteleone, CEO, Global Med Systems</cite></blockquote>
+      </div>
+      <div class="row">
+        <img src="https://founderbrands.io/assets/artifact/c08736a498781c85.jpg" alt="Phil Fitzgerald" loading="lazy">
+        <div class="num">360k<small>LinkedIn impressions in a month, up from 13k. Profile views went from 90 to 2,400.</small></div>
+        <blockquote>&ldquo;They know what they&rsquo;re doing.&rdquo;<cite>Phil Fitzgerald, Amplify Consulting Services, verified Clutch review</cite></blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="founder" aria-labelledby="f-h">
+  <div class="wrap">
+    <img src="https://founderbrands.io/assets/artifact/969fc27adb4db4b5.jpg" alt="Collin Rutherford, founder of FounderBrands" loading="lazy">
+    <div>
+      <h2 id="f-h" class="shout" style="font-size:clamp(46px,6.4vw,96px)">Built by a guy who already did it.</h2>
+      <p>Collin Rutherford built his first company, Greenbox Storage, to 23 schools while playing Division I hockey at Dartmouth. Then he wrote 18,000+ posts on X and built his own pipeline from scratch. FounderBrands is that playbook, with a team attached so you don't have to run it yourself.</p>
+      <div class="facts">
+        <div><b>18,000+</b><span>posts written on X</span></div>
+        <div><b>62M</b><span>views on a single post</span></div>
+        <div><b>100+</b><span>B2B founders served</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="guarantee" aria-labelledby="g-h">
+  <div class="wrap">
+    <h2 id="g-h" class="shout">10 calls in 90 days or we work for free.</h2>
+    <p>Ten qualified sales calls in your first 90 days. If we miss, we keep working at no charge until we hit it. Read that again, then go ask your last agency for the same deal.</p>
+  </div>
+</section>
+
+<section class="math" aria-labelledby="m-h">
+  <div class="wrap">
+    <div>
+      <h2 id="m-h" class="shout" style="font-size:clamp(46px,6vw,92px)">Cheaper than one junior hire.</h2>
+      <p>$3,999 a month gets you the brand manager, the writers, the outbound specialist and the booked calls. Four-month start, then month to month. You own every post.</p>
+      <p>For most B2B founders, one closed deal pays for the year.</p>
+    </div>
+    <div class="bill" aria-label="Cost comparison">
+      <div><span class="x">Senior copywriter</span><span class="x">$7,000/mo</span></div>
+      <div><span class="x">Outbound SDR</span><span class="x">$5,000/mo</span></div>
+      <div><span class="x">You, managing both</span><span class="x">10+ hrs/wk</span></div>
+      <div class="total"><span>FounderBrands, all of it</span><span>$3,999/mo</span></div>
+      <div><span>Your time</span><span>1 hour a month</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="nope" aria-labelledby="n-h">
+  <div class="wrap">
+    <h2 id="n-h" class="shout" style="font-size:clamp(46px,6vw,92px)">This isn't for you if...</h2>
+    <ul>
+      <li>You want to go viral dancing. Wrong agency.</li>
+      <li>You can't spare one hour a month. Then nothing will work, including us.</li>
+      <li>You won't approve posts within a couple of days. Speed is the whole point.</li>
+      <li>Your average deal is a few hundred bucks. The math won't work for you.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="audit" id="audit" aria-labelledby="a-h">
+  <div class="wrap">
+    <div>
+      <h2 id="a-h" class="shout">Find out why your profile isn't selling.</h2>
+      <p class="lede">Drop your profile. We'll show you what a buyer sees in the first five seconds, and exactly what to fix. Brutally honest, completely free.</p>
+      <ul>
+        <li>Your positioning, as a buyer reads it</li>
+        <li>What's killing your profile-to-call rate</li>
+        <li>Three fixes you can make this week</li>
+      </ul>
+    </div>
+    <div class="formbox">
+      <form data-audit-form novalidate>
+        <label for="b-li">LinkedIn profile URL</label>
+        <input id="b-li" name="linkedin" type="url" inputmode="url" placeholder="linkedin.com/in/yourname">
+        <label for="b-x">X handle <span class="opt">optional</span></label>
+        <input id="b-x" name="x" type="text" placeholder="@yourhandle">
+        <label for="b-rev">Monthly revenue</label>
+        <select id="b-rev" name="revenue">
+          <option>Under $25k</option>
+          <option selected>$25k to $100k</option>
+          <option>$100k to $500k</option>
+          <option>$500k+</option>
+        </select>
+        <label for="b-email">Work email</label>
+        <input id="b-email" name="email" type="email" autocomplete="email" placeholder="you@company.com">
+        <p class="status" data-form-status role="alert" hidden></p>
+        <button class="btn" type="submit">Audit my profile</button>
+        <p class="fine">Results by email within one business day. No sales call required.</p>
+      </form>
+      <div class="done" data-form-done tabindex="-1" hidden>
+        <div class="shout">Audit started.</div>
+        <p>Your results are headed to <b data-email></b>. Expect them within one business day.</p>
+        <ol>
+          <li>What a buyer sees in the first five seconds</li>
+          <li>What's costing you calls, ranked</li>
+          <li>Three fixes to make this week</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
 </main>
+<footer><div class="wrap">&copy; 2026 FounderBrands. Results shown are from named clients and aren't typical of every engagement.</div></footer>
+<script src="assets/audit-form.js" defer></script>
 </body>
 </html>
